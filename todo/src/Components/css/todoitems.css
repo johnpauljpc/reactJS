@@ -1,0 +1,12 @@
+.todo-items-wrapper{
+    color: #0e0e0e;
+    display: flex;
+    justify-content: space-between;
+}
+
+.delete-task, .checkbox{
+    cursor: pointer;
+}
+input[type="checkbox"].checkbox:checked +*{
+    text-decoration: line-through;
+}

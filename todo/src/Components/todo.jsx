@@ -23,7 +23,7 @@ function Todo() {
     useEffect(()=>{
     setTimeout(() => {
       localStorage.setItem("todos", JSON.stringify(todos))
-      // counter =
+      counter = localStorage.getItem("todo_count")
     }, 100);
   },[todos])
 
@@ -42,7 +42,9 @@ function Todo() {
           todos.map((task, key)=>(
             <Todoitems 
             key = {key}
+            no = {task.num}
             task = {task.task}
+            setTodos = {setTodos}
             />
           ))
         }

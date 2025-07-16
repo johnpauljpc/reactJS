@@ -1,58 +1,94 @@
-.todo{
-    width: 600px;
-    height: 732px;
+.todo {
+    min-height: 50vh ;
+    max-width: 90%;
+    width: 100%;
+    height: auto;
     border-radius: 20px;
     background: #fff;
-    margin: auto;
-    margin-top: 174px;
+    margin: 80px auto 100px auto;
     display: flex;
     flex-direction: column;
-    padding: 0px 44px;
-    border-bottom: 30px;
-    margin-bottom: 100px;
-   
+    padding: 20px;
+    overflow-y: auto;
+    box-sizing: border-box;
 }
 
-.todo-header{
+/* Header */
+.todo-header {
     color: #002765;
-    margin-top: 84px;
-    font-size: 36px;
+    margin-top: 40px;
+    font-size: 2rem;
     font-weight: 600;
-    line-height: 34px;
-   
+    line-height: 1.2;
+    position: sticky;
+    top: 10px;
+    background: white; /* Prevents overlap */
+    z-index: 1;
+    padding: 10px 0;
 }
 
-.todo-add{
+/* Add Section */
+.todo-add {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
-    margin-top: 45px;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
     color: #002765;
 }
 
-.todo-input{
+/* Input */
+.todo-input {
+    flex: 1 1 100%;
+    max-width: 100%;
     border-radius: 50px;
     background: #edeef0;
     border: none;
     outline: none;
-    width: 576px;
-    height: 80px;
-    padding-left: 35px;
-    font-size: 20px;
+    height: 60px;
+    padding-left: 20px;
+    font-size: 18px;
     color: #002765;
+    box-sizing: border-box;
 }
 
-.todo-add-btn{
+/* Button */
+.todo-add-btn {
     border-radius: 50px;
     background: orangered;
-    width: 187px;
-    height: 80px;
-    display:flex;
+    height: 60px;
+    min-width: 150px;
+    padding: 0 20px;
+    display: flex;
     justify-content: center;
     align-items: center;
-    margin-left:-150px;
     color: white;
-    font-size: 26px;
+    font-size: 20px;
     cursor: pointer;
-    
+    flex-shrink: 0;
+}
+
+/* Media Query for Small Screens */
+@media (min-width: 600px) {
+    .todo {
+        max-width: 600px;
+        padding: 0px 44px;
+    }
+
+    .todo-input {
+        flex: 1;
+        width: auto;
+        height: 80px;
+        font-size: 20px;
+    }
+
+    .todo-add-btn {
+        height: 80px;
+        font-size: 26px;
+    }
+
+    .todo-add {
+        flex-wrap: nowrap;
+    }
 }

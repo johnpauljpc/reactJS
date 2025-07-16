@@ -2,6 +2,8 @@
     color: #0e0e0e;
     display: flex;
     justify-content: space-between;
+    margin: .75 em auto ;
+    
 }
 
 .delete-task, .checkbox{

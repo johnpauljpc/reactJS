@@ -1,3 +1,7 @@
+*{
+    font-family: monospace;
+}
+
 .todo {
     min-height: 50vh ;
     max-width: 90%;
@@ -33,32 +37,32 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
     margin-top: 30px;
     color: #002765;
+  
 }
 
 /* Input */
 .todo-input {
     flex: 1 1 100%;
     max-width: 100%;
-    border-radius: 50px;
+    border-radius: 10px;
     background: #edeef0;
     border: none;
     outline: none;
-    height: 60px;
     padding-left: 20px;
     font-size: 18px;
     color: #002765;
     box-sizing: border-box;
 }
 
+
 /* Button */
 .todo-add-btn {
-    border-radius: 50px;
+    border-radius: 10px;
     background: orangered;
-    height: 60px;
-    min-width: 150px;
+    min-width: 70px;
     padding: 0 20px;
     display: flex;
     justify-content: center;
@@ -69,6 +73,10 @@
     flex-shrink: 0;
 }
 
+.todo-list{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
 /* Media Query for Small Screens */
 @media (min-width: 600px) {
     .todo {
@@ -79,12 +87,12 @@
     .todo-input {
         flex: 1;
         width: auto;
-        height: 80px;
+        height: 60px;
         font-size: 20px;
     }
 
     .todo-add-btn {
-        height: 80px;
+        height: 60px;
         font-size: 26px;
     }
 

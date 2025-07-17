@@ -1,14 +1,51 @@
+
+
 .todo-items-wrapper{
     color: #0e0e0e;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: .75 em auto ;
+    padding-top: 4px;
+    border-radius: 5px;
+    padding: 2px 4px;
+}
+
+.todo-items-wrapper:nth-of-type(n){
+    background-color: rgba(188, 245, 233,0.3);
+}
+.todo-items-wrapper:nth-of-type(2n){
+    background-color: rgba(245, 225, 188,0.3);
+}
+
+.todo-items-wrapper:nth-of-type(3n){
+    background-color: rgba(245, 188, 188, 0.3)
+
+}
+.checkbox{
+    cursor: pointer;
+    width: 1.5em;
+    height: 1.5em;
     
 }
 
-.delete-task, .checkbox{
-    cursor: pointer;
+.todo-item-task{
+    font-size: 1.4em;
+    font-family: monospace;
 }
+.delete-task{
+    font-size: 1.7em;
+    cursor: pointer;
+    color: red;
+    font-weight: 900;
+}
+.delete-task:hover{
+    background-color: rgb(236, 218, 218);
+    border-radius: 20px;
+}
+
 input[type="checkbox"].checkbox:checked +*{
     text-decoration: line-through;
 }
+
+

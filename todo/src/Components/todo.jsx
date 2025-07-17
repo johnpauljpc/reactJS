@@ -10,8 +10,9 @@ function Todo() {
 
 
   const add = ()=>{
-    setTodos([...todos, {num:++counter, task:inputRef.current.value}])
+    setTodos([...todos, {num:++counter,done:false, task:inputRef.current.value}])
      localStorage.setItem("todo_count", counter)
+     inputRef.current.value = ""
     
   }
 

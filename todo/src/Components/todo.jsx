@@ -4,17 +4,18 @@ import Todoitems from './todoitems'
 
 
 let counter = 0
+
 function Todo() {
   const [todos, setTodos] = useState([])
   const inputRef = useRef(null)
 
 
-
   const add = ()=>{
-    setTodos([...todos, {num:++counter,done:false, task:inputRef.current.value}])
+    const inputValue = inputRef.current.value.trim();
+    if (inputValue === "") return;
+    setTodos([...todos, {num:++counter,done:false, task:inputValue}])
      localStorage.setItem("todo_count", counter)
      inputRef.current.value = ""
-    
   }
 
   useEffect(()=>{
@@ -22,7 +23,7 @@ function Todo() {
    
   }, [])
 
-    useEffect(()=>{
+  useEffect(()=>{
     setTimeout(() => {
       localStorage.setItem("todos", JSON.stringify(todos))
       counter = localStorage.getItem("todo_count")

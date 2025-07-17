@@ -5,10 +5,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: .75 em auto ;
+    margin: .35em auto ;
     padding-top: 4px;
     border-radius: 5px;
     padding: 2px 4px;
+
 }
 
 .todo-items-wrapper:nth-of-type(n){
@@ -32,7 +33,27 @@
 .todo-item-task{
     font-size: 1.4em;
     font-family: monospace;
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
 }
+.todo-item{
+    display: flex;
+    overflow: hidden;
+    /* text-overflow: ellipsis; */
+    
+}
+
+.update-field{
+    font-size: 1.4em;
+    font-family: monospace;
+    background: none;
+    color: #0e0e0e;
+    border: none;
+    outline: none;
+}
+
 .delete-task{
     font-size: 1.7em;
     cursor: pointer;

@@ -9,6 +9,7 @@ function Todo() {
   const inputRef = useRef(null)
 
 
+
   const add = ()=>{
     setTodos([...todos, {num:++counter,done:false, task:inputRef.current.value}])
      localStorage.setItem("todo_count", counter)
@@ -32,7 +33,7 @@ function Todo() {
 
   return (
     <div className='todo'>
-      <div className="todo-header">To-do List</div>
+      <div className="todo-header">To-do List &#128221;</div>
       <div className="todo-add">
         <input type="text" className="todo-input" ref={inputRef} placeholder='Add Your Task'  />
         <div className="todo-add-btn" onClick={add}>Add</div>
@@ -45,6 +46,7 @@ function Todo() {
             key = {key}
             no = {task.num}
             task = {task.task}
+            task_done={task.done}
             setTodos = {setTodos}
             />
           ))

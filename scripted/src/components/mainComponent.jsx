@@ -1,4 +1,5 @@
 import React from 'react';
+// import "./imgs"
 
 // Main App component
 const App = () => {

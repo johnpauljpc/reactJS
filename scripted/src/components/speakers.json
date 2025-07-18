@@ -4,20 +4,20 @@
     "name": "JOSHUA ONYEMA",
     "title": "Speaker, Software Engineering and Content Creation",
     "bio": "Software Engineer, Content Creator, and Purpose-Driven Leader\nJoshua Onyema is a software engineer and content creator who enjoys helping people and sharing valuable knowledge.\nHe served as the Director of Media for Rev. Fr. Ejike Mbaka and the Adoration Ministry in Enugu, Nigeria. In this role, he led the media team and helped share the ministry’s message with many people both in Nigeria and abroad.\nHe earned a first-class degree in Computer Science from Godfrey Okoye University and is now studying for his Master of Applied Computer Science at Concordia University in Canada.\nAs a verified content creator with over 400,000 followers on TikTok, Joshua shares programming tutorials, tech insights, and practical tips to help others learn and grow in the field of technology.\nJoshua is also a committed Christian, a lover of Jesus, and someone who believes strongly in the power of the Holy Spirit.\nHis journey shows his dedication to excellence, faith, and using technology to make a positive impact.",
-    "image": "src/components/imgs/joshua.jpg"
+    "image": "https://raw.githubusercontent.com/johnpauljpc/reactJS/refs/heads/main/scripted/src/components/imgs/joshua.jpg"
   },
   {
     "id": 2,
     "name": "CHUKWUEMEKA EMMANUEL OKONKWO ESQ",
     "title": "Speaker, Legal Practice & Youth Mentorship",
     "bio": "Is a staunch Christian and a believer in the grace of God through our Lord Jesus Christ. A young trained and practicing Legal Practitioner resident and practicing in the city of Port Harcourt with interest and experience in Property & Real Estate Law, Immigration, Migration, Travel & Tour, Corporate Law and Governance and General Legal Practice.\n\nA highly business minded individual and an entrepreneur by birth with experience in starting, sustaining and growing a business or an idea. Passionate about training and mentoring the young generation to become excellent people modelling Christ in all ramifications of life.\n\nGoverned by the core truths of faith, calmness, doggedity, integrity and excellence, he has been able to triumph over challenges of life seeing and using same as ladders to one’s calling and destiny.\n\nA firm believer that life isn’t designed to be easy, however, with God and hard work, one can achieve all that one conceives. This he has lived through his story of triumph over lives seeming challenges.\n\nHe aspires to build, train a people who are Spiritually intelligent and balanced, intellectually sound, socially fit and psychologically balanced.",
-    "image": "src/components/imgs/emma.jpg"
+    "image": "https://raw.githubusercontent.com/johnpauljpc/reactJS/refs/heads/main/scripted/src/components/imgs/emma.jpg"
   },
   {
     "id": 3,
     "name": "CHRISTIAN DIVINEFAVOUR",
     "title": "Speaker, AI & Data Science",
     "bio": "Christian Divinefavour is a Data Scientist at Turing, where he works on cutting-edge AI systems for top global tech companies, including the Big 5. He also serves as an IT Consultant with Make in Nigeria Project, helping shape technology solutions that support local industries, agribusinesses, and startups with a special focus on empowering communities in the South-South and South-East regions of Nigeria.\n\nChristian’s career has spanned IT support, business intelligence, and now advanced AI engineering. He’s led data science teams, built scalable systems on cloud, mentored dozens of young tech talents, and spoken at virtual bootcamps and innovation forums.\n\nWhat sets Christian apart is not just his technical excellence, but his unwavering belief in God’s faithfulness; a conviction that carries him through each line of code, each collaboration, and every opportunity to give back.\n\nWhether he’s fine-tuning a large language model or encouraging a student to take their first steps in tech, Christian brings depth, humility, and heart to everything he does.",
-    "image": "src/components/imgs/chris.jpeg"
+    "image": "https://raw.githubusercontent.com/johnpauljpc/reactJS/refs/heads/main/scripted/src/components/imgs/chris.jpeg"
   }
 ]

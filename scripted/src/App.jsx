@@ -6,10 +6,14 @@ import './App.css'
 // Main App component
 
 const App = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+
   // Speaker data (you can expand this with more speakers)
   
   // Simplified Schedule data to just contain overall date and time
-  const eventDateTime = 'July 21st - 27st, 2025 | 08:00 PM Daily';
+  const eventDate = 'July 21st - 27st, 2025';
+  const eventTime = '08:00 PM Daily';
 
   // State for the registration form
   const [registrationData, setRegistrationData] = useState({
@@ -41,7 +45,7 @@ const App = () => {
     }
 
     const message = `Hello Sir👋, My name is ${fname}, I want to be part of the SCRIPTED CONFERENCE`;
-    const whatsappLink = `https://wa.me/2349012345678?text=${encodeURIComponent(message)}`;
+    const whatsappLink = `https://wa.me/2348108352835?text=${encodeURIComponent(message)}`;
     console.log("******", message)
 
     window.open(whatsappLink, '_blank');
@@ -81,20 +85,22 @@ const App = () => {
           </a>
 
           {/* Navigation Links */}
-          <div className="nav-links">
-            <a href="#speakers" className="nav-link">Speakers</a>
-            <a href="#schedule" className="nav-link">Schedule</a>
-            <a href="#registration" className="nav-link">Register</a>
-            <a href="#contact" className="nav-link">Contact</a>
-          </div>
+<div className={`nav-links ${isMobileMenuOpen ? 'show-mobile-menu' : ''}`}>
+  <a href="#speakers" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Speakers</a>
+  <a href="#schedule" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Schedule</a>
+  <a href="#registration" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Register</a>
+  <a href="#contact" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Contact</a>
+</div>
 
           {/* Mobile Menu Button (Hamburger Icon) */}
           <div className="mobile-menu-button-container">
-            <button className="mobile-menu-button">
-              <svg className="mobile-menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-              </svg>
-            </button>
+            <button className="mobile-menu-button" onClick={toggleMobileMenu}>
+  <svg className="mobile-menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+      d="M4 6h16M4 12h16m-7 6h7"></path>
+  </svg>
+</button>
           </div>
         </div>
       </nav>
@@ -143,13 +149,16 @@ const App = () => {
       <section id="schedule" className="section-base schedule-section">
         <h2 className="section-title">Conference Schedule</h2>
         <p className="schedule-info">
-          {eventDateTime}
+          📅 {eventDate}
+        </p>
+        <p className="schedule-info">
+          🕒 {eventTime}
         </p>
       </section>
 
       {/* Registration Section */}
       <section id="registration" className="section-base registration-section">
-        <h2 className="registration-title">Register for The Value Conference 2025</h2>
+        <h2 className="registration-title">Register for Scripted 2.0</h2>
         <p className="registration-description">
           Fill out the form below to secure your spot!
         </p>
@@ -191,7 +200,7 @@ const App = () => {
             type="submit"
             className="submit-button"
           >
-            Submit Registration
+            Submit
           </button>
 
         </form>
@@ -214,18 +223,18 @@ const App = () => {
             <p className="contact-info-text">
               {/* <strong>Address:</strong> Enugu State, Nigeria */}
             </p>
-            <div className="follow-us-container" style={{}}>
-              <h4 className="follow-us-title">Follow Us:</h4>
-              {/* <div className="social-iconsy"> */}
-              <div style={{display:"flex", gap: "0.75em"}}>
+            <div className="follow-us-container">
+              <h4 className="follow-us-title">Follow Us on:</h4>
+              <div className="social-icons">
+              {/* <div style={{display:"flex", gap: "0.75em"}}> */}
                 <a href="https://www.instagram.com/gozirim_001?utm_source=qr&igsh=aTJzOGhjOHQ0OWtt" className="social-icon">
-                   <FaInstagram/>
+                   <FaInstagram color="red"/>
                 </a>
                 <a href="https://www.tiktok.com/@gozirim001withgod?_t=ZM-8sxQb93wr6z&_r=1" className="social-icon">
-                  <FaTiktok />
+                  <FaTiktok color="purple"/>
                 </a>
                 <a href="https://www.youtube.com/@Gozirim0001" className="social-icon">
-                  <FaYoutube />
+                  <FaYoutube color="red"/>
                 </a>
               </div>
             </div>
@@ -236,7 +245,7 @@ const App = () => {
       {/* Footer Section */}
       <footer className="footer">
         <div className="navbar-container"> {/* Reusing navbar-container for centering */}
-          <p>&copy; {new Date().getFullYear()} The Value Conference. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} The Value Conference | All rights reserved.</p>
           {/* <div className="footer-links">
             <a href="#" className="footer-link">Privacy Policy</a>
             <a href="#" className="footer-link">Terms of Service</a>
